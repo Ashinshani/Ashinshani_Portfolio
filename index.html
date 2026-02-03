@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashinshani | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Optional: Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Background decor -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  <!-- NAV -->
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <span class="brand-dot"></span> ASHINSHANI BANDARA
+      </a>
+
+      <nav class="nav" id="nav">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#about">About me</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact us</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="chip">
+          <span class="chip-dot"></span>
+          Personal Portfolio • Data Analyst/ Data Science enthusiast
+        </div>
+
+        <h1>
+          Hi, I’m <span class="grad">Ashinshani</span>
+        </h1>
+
+        <p class="sub">
+          Welcome to my data world - where numbers tell stories and algorithms bring ideas to life. 
+          I’m Ashinshani, a detail-driven Data Science enthusiast specializing in Machine Learning, AI workflows, 
+          and interactive dashboards. Explore my projects to see how I turn data into decisions.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn ghost" href="#projects">
+            View Projects
+            <span class="btn-glow" aria-hidden="true"></span>
+          </a>
+          <!--CV Downlaoding button-->
+          <a
+             class="btn primary pulse-glow"
+             href="assets/Hiruni_CV.pdf"
+             download="Hiruni_CV.pdf"
+  >
+              Download CV
+              </a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="socials">
+          <a href="#" aria-label="Instagram" class="social">IG</a>
+          <a href="#" aria-label="TikTok" class="social">TT</a>
+          <a href="#" aria-label="YouTube" class="social">YT</a>
+          <a href="#" aria-label="GitHub" class="social">GH</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <!-- Replace this image with your 2nd image file -->
+          <img
+            src="assets/girl.png"
+            alt="Developer girl illustration"
+            class="hero-img"
+            loading="lazy"
+          />
+
+          <div class="floating f1">AI</div>
+          <div class="floating f2">DS</div>
+          <div class="floating f3">BI</div>
+          <div class="floating f4">Py</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container section-grid">
+      <div class="section-title">
+        <h2>About me</h2>
+        <p>
+          Data Science student at SLIIT University, specializing in Machine Learning, AI, and data analytics.
+          Experienced in building and deploying predictive models, designing AI workflows, and creating
+           data visualizations. Proficient in Python, SQL, and Power BI. 
+           Passionate about turning data into actionable insights and intelligent solutions.
+
+
+        </p>
+      </div>
+
+      <div class="glass card">
+        <h3>Who am I?</h3>
+        <p>
+          I’m a Data Analyst / Data enthusiast who enjoys creating clean and insightful data visualizations,
+          building useful ML systems, and solving problems with code.
+        </p>
+
+        <div class="mini-stats">
+          <div class="stat">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Tech Stacks</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Learning</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>Tools and technologies</p>
+      </div>
+
+      <div class="grid skills-grid">
+        <div class="glass card skill">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>Streamlit</li>
+            <li>Responsive UI</li>
+          </ul>
+        </div>
+
+        <div class="glass card skill">
+          <h3>Backend</h3>
+          <ul>
+            <li>Java / CRUD</li>
+            <li>Database basics</li>
+            <li>Python / CRUD</li>
+            <li>Machine Learning</li>
+            <li>AI Agentic</li>
+          </ul>
+        </div>
+
+        <div class="glass card skill">
+          <h3>Data / BI</h3>
+          <ul>
+            <li>SQL</li>
+            <li>Power BI</li>
+             <li>Data Visualization</li>
+            <li>EDA / Reporting</li>
+          </ul>
+        </div>
+
+        <div class="glass card skill">
+          <h3>Extras</h3>
+          <ul>
+            <li>Git / GitHub</li>
+            <li>UI polish</li>
+            <li>Cloud Computing</li>
+            <li>Canva</li>
+            <li>Figma Designing</li>
+            <li>Documentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Brows My Recent Projects</p>
+      </div>
+
+      <div class="grid projects-grid">
+  <article class="glass card project">
+  <div class="project-image">
+    <img src="assets/Freelancing 1.png" alt="Portfolio Website Project" width="350px"/>
+  </div>
+
+  <div class="project-content">
+    <div class="project-top">
+      <div class="badge">Power BI</div>
+      <div class="badge soft">Data Analysis & Visualization</div>
+    </div>
+
+    <h3>E-Commerce Sales Dashboard</h3>
+    <p>
+      🛒This project is a comprehensive E-Commerce Sales Analysis Dashboard built using Power BI,
+       designed to help stakeholders monitor performance, identify trends, and make data-driven business decisions.
+    </p>
+
+    <div class="project-actions">
+      <a class="link" href="#" target="_blank">Details</a>
+      <a class="link" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</article>
+
+<!--Project 2-->
+        <article class="glass card project">
+  <div class="project-image">
+    <img src="assets/Artgenerator.png" alt="Portfolio Website Project" width="350px" height="200px"/>
+  </div>
+
+  <div class="project-content">
+    <div class="project-top">
+      <div class="badge">Streamlit</div>
+      <div class="badge soft">AI Agentic System</div>
+    </div>
+
+    <h3>Personalized Art Generator</h3>
+    <p>
+      A Personalized Art Generator, built using a modular multi-agent AI architecture to create user-centric digital artwork. The system consists of four collaborative AI agents, each responsible for a specific stage of the creative pipeline.
+    </p>
+
+    <div class="project-actions">
+      <a class="link" href="#" target="_blank">Details</a>
+      <a class="link" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</article>
+<!-- Project 3 -->
+         <article class="glass card project">
+  <div class="project-image">
+    <img src="assets/Fitness Tracker 2.png" alt="Portfolio Website Project" width="350px" height="200px"/>
+  </div>
+
+  <div class="project-content">
+    <div class="project-top">
+      <div class="badge">Power BI</div>
+      <div class="badge soft">Data Analysis & Visualization</div>
+    </div>
+
+    <h3>Fitness Tracker Dashboard</h3>
+    <p>
+     🚀Fitness Tracker Dashboard focused on user-friendly visuals and dynamic insights using DAX measures and interactive visuals and highlights key gym metrics such as revenue, expenses, membership status, monthly trends, and client distribution.
+    </p>
+
+    <div class="project-actions">
+      <a class="link" href="#" target="_blank">Details</a>
+      <a class="link" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</article>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container section-grid">
+      <div class="section-title">
+        <h2>Contact us</h2>
+        <p>Send a quick message. (This form shows a success toast only.)</p>
+      </div>
+
+      <form class="glass card form" id="contactForm">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@email.com" required />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+        </div>
+
+        <button class="btn primary" type="submit">
+          Send Message
+          <span class="btn-glow" aria-hidden="true"></span>
+        </button>
+
+        <p class="form-note">
+          Tip: Replace this with EmailJS / backend later if you want real sending.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> QualiCode. All rights reserved.</p>
+      <a class="to-top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span id="toastText">Message sent!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
