@@ -180,59 +180,136 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <p>Tools and technologies</p>
-      </div>
-
-      <div class="grid skills-grid">
-        <div class="glass card skill">
-          <h3>Frontend</h3>
-          <ul>
-            <li>HTML / CSS</li>
-            <li>JavaScript</li>
-            <li>Streamlit</li>
-            <li>Responsive UI</li>
-          </ul>
-        </div>
-
-        <div class="glass card skill">
-          <h3>Backend</h3>
-          <ul>
-            <li>Java / CRUD</li>
-            <li>Database basics</li>
-            <li>Python / CRUD</li>
-            <li>Machine Learning</li>
-            <li>AI Agentic</li>
-          </ul>
-        </div>
-
-        <div class="glass card skill">
-          <h3>Data / BI</h3>
-          <ul>
-            <li>SQL</li>
-            <li>Power BI</li>
-             <li>Data Visualization</li>
-            <li>EDA / Reporting</li>
-          </ul>
-        </div>
-
-        <div class="glass card skill">
-          <h3>Extras</h3>
-          <ul>
-            <li>Git / GitHub</li>
-            <li>UI polish</li>
-            <li>Cloud Computing</li>
-            <li>Canva</li>
-            <li>Figma Designing</li>
-            <li>Documentation</li>
-          </ul>
-        </div>
-      </div>
+  <section id="skills" class="skills-section">
+  <div class="container">
+    <div class="skills-head">
+      <h1>My Skills</h1>
+      <p>
+        We put your ideas and thus your wishes in the form of a unique web project that
+        inspires you and your customers.
+      </p>
     </div>
-  </section>
+
+    <div class="skills-slider-wrapper">
+
+  <button class="skills-arrow left" id="skillsPrev" aria-label="Previous">
+    &#10094;
+  </button>
+  <div class="skills-slider" id="skillsSlider">
+    <div class="skills-grid">
+      <!-- Skill Card -->
+      <div class="skill-card" data-percent="92">
+        <div class="skill-icon">
+          <img src="assets/figma.png" alt="Figma">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">Figma</div>
+      </div>
+
+      <div class="skill-card" data-percent="80">
+        <div class="skill-icon">
+          <img src="assets/python.png" alt="Python">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">Python</div>
+      </div>
+
+      <div class="skill-card" data-percent="85">
+        <div class="skill-icon">
+          <img src="assets/power.png" alt="Power BI">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">Power BI</div>
+      </div>
+
+      <div class="skill-card" data-percent="99">
+        <div class="skill-icon">
+          <img src="assets/sql.png" alt="SQL">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">SQL</div>
+      </div>
+
+      <div class="skill-card" data-percent="89">
+        <div class="skill-icon">
+          <img src="assets/java.png" alt="Java">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">Java</div>
+      </div>
+
+      <div class="skill-card" data-percent="86">
+        <div class="skill-icon">
+          <img src="assets/html.png" alt="HTML">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">HTML</div>
+      </div>
+
+      <div class="skill-card" data-percent="80">
+        <div class="skill-icon">
+          <img src="assets/css.png" alt="CSS">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">CSS</div>
+      </div>
+
+      <div class="skill-card" data-percent="70">
+        <div class="skill-icon">
+          <img src="assets/git.png" alt="Git">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">Git</div>
+      </div>
+
+      <div class="skill-card" data-percent="75">
+        <div class="skill-icon">
+          <img src="assets/github.png" alt="GitHub">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">GitHub</div>
+      </div>
+
+      <div class="skill-card" data-percent="60">
+        <div class="skill-icon">
+          <img src="assets/js.png" alt="JavaScript">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">JavaScript</div>
+      </div>
+
+      <div class="skill-card" data-percent="93">
+        <div class="skill-icon">
+          <img src="assets/kotlin.png" alt="kotlin">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">Kotlin</div>
+      </div>
+
+      <div class="skill-card" data-percent="93">
+        <div class="skill-icon">
+          <img src="assets/ML.png" alt="ML">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">ML</div>
+      </div>
+
+      <div class="skill-card" data-percent="93">
+        <div class="skill-icon">
+          <img src="assets/android.png" alt="Android Studio">
+        </div>
+        <div class="skill-percent"><span class="count">0</span>%</div>
+        <div class="skill-name">Android</div>
+      </div>
+
+    </div>
+  </div>
+  
+  <button class="skills-arrow right" id="skillsNext" aria-label="Next">
+    &#10095;
+  </button>
+</div>
+</section>
 
   <!-- PROJECTS -->
   <section id="projects" class="section">
@@ -270,6 +347,57 @@
 <!--Project 2-->
         <article class="glass card project">
   <div class="project-image">
+    <img src="assets/Coffee Dashboard.png" alt="Portfolio Website Project" width="350px" height="200px"/>
+  </div>
+
+  <div class="project-content">
+    <div class="project-top">
+      <div class="badge">Power BI</div>
+      <div class="badge soft">Data Analysis & Visualization</div>
+    </div>
+
+    <h3>Coffee Sales Analysis Dashboard</h3>
+    <p>
+      An interactive Power BI dashboard featuring a modern UI to track coffee shop performance. 
+      It visualizes monthly sales trends, peak transaction times, 
+      and product-level insights to optimize inventory and sales strategies
+    </p>
+
+    <div class="project-actions">
+      <a class="link" href="#" target="_blank">Details</a>
+      <a class="link" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</article>
+
+<!--Project 3-->
+        <article class="glass card project">
+  <div class="project-image">
+    <img src="assets/chatbot2.png" alt="Portfolio Website Project" width="350px" height="200px"/>
+  </div>
+
+  <div class="project-content">
+    <div class="project-top">
+      <div class="badge">Web App</div>
+      <div class="badge soft">AI System</div>
+    </div>
+
+    <h3>AI Chatbot</h3>
+    <p>
+      An intelligent conversational agent powered by the Gemini API, featuring multi-modal capabilities such as 
+      image understanding and contextual replies and integrated emoji picker and attachment support for a seamless user experience.
+    </p>
+
+    <div class="project-actions">
+      <a class="link" href="#" target="_blank">Details</a>
+      <a class="link" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</article>
+
+<!--Project 4-->
+        <article class="glass card project">
+  <div class="project-image">
     <img src="assets/Artgenerator.png" alt="Portfolio Website Project" width="350px" height="200px"/>
   </div>
 
@@ -290,7 +418,33 @@
     </div>
   </div>
 </article>
-<!-- Project 3 -->
+
+  <article class="glass card project">
+  <div class="project-image">
+    <img src="assets/spotify background 2.png" alt="Portfolio Website Project" width="350px" height="200px"/>
+  </div>
+
+  <div class="project-content">
+    <div class="project-top">
+      <div class="badge">Power BI</div>
+      <div class="badge soft">Data Analysis & Visualization</div>
+    </div>
+
+    <h3>Spotify Data Analysis Dashboard</h3>
+    <p>
+      A visually immersive Power BI dashboard designed with a dark-themed Spotify UI to analyze music trends. 
+      It tracks key metrics like average song popularity, monthly release distributions, 
+      and artist-specific performance insights.
+    </p>
+
+    <div class="project-actions">
+      <a class="link" href="#" target="_blank">Details</a>
+      <a class="link" href="#" target="_blank">GitHub</a>
+    </div>
+  </div>
+</article>
+
+<!-- Project 5 -->
          <article class="glass card project">
   <div class="project-image">
     <img src="assets/Fitness Tracker 2.png" alt="Portfolio Website Project" width="350px" height="200px"/>
@@ -304,7 +458,9 @@
 
     <h3>Fitness Tracker Dashboard</h3>
     <p>
-     🚀Fitness Tracker Dashboard focused on user-friendly visuals and dynamic insights using DAX measures and interactive visuals and highlights key gym metrics such as revenue, expenses, membership status, monthly trends, and client distribution.
+     Fitness Tracker Dashboard focused on user-friendly visuals and dynamic insights using DAX measures 
+      and highlights key gym metrics such as revenue, expenses, membership status, 
+     monthly trends, and client distribution.
     </p>
 
     <div class="project-actions">
