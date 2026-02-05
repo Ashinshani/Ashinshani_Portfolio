@@ -869,3 +869,96 @@ input:focus, textarea:focus{
   }
 }
 
+/* Skills bar section styles */
+/* =========================
+   Skills Progress Bars
+   ========================= */
+
+.skills-bars{
+  margin-top: 28px;
+  padding: 22px;
+  border-radius: 22px;
+}
+
+.skills-bars-title{
+  margin: 0 0 18px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 15px;
+  color: rgba(244,241,255,.92);
+  text-transform: uppercase;
+}
+
+.skill-bar{
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.skill-bar:last-child{
+  border-bottom: none;
+}
+
+.skill-bar-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-label{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 800;
+  color: rgba(244,241,255,.92);
+}
+
+.skill-mini-icon{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(1.15);
+  opacity: .95;
+}
+
+.skill-value{
+  font-weight: 900;
+  color: rgba(244,241,255,.78);
+  font-size: 13px;
+}
+
+.bar-track{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill{
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(168,85,247,.95), rgba(34,211,238,.65));
+  box-shadow: 0 0 16px rgba(168,85,247,.35);
+  transition: width 1.2s ease;
+}
+
+/* FORCE skills & expertise card to be smaller and centered */
+.skills-section .skills-bars {
+  max-width: 720px !important;   /* 👈 clearly smaller */
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 24px;
+  padding: 20px;
+}
+
+@media (max-width: 1024px){
+  .skills-bars{
+    max-width: 92%;
+  }
+}
+
+

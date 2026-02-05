@@ -161,3 +161,23 @@ skillsNext?.addEventListener("click", () => {
 skillsPrev?.addEventListener("click", () => {
   skillsGrid.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
 });
+
+/* skill bar animated */
+const barBlocks = document.querySelectorAll(".skill-bar");
+
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const el = entry.target;
+    const level = el.getAttribute("data-level");
+    const fill = el.querySelector(".bar-fill");
+
+    if (!el.dataset.done) {
+      fill.style.width = level + "%";
+      el.dataset.done = "true";
+    }
+  });
+}, { threshold: 0.35 });
+
+barBlocks.forEach(b => barObserver.observe(b));
