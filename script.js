@@ -6,16 +6,16 @@ const yearEl = document.getElementById("year");
 yearEl.textContent = new Date().getFullYear();
 
 /* Mobile menu toggle */
-menuBtn.addEventListener("click", () => {
+menuBtn?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("open");
   menuBtn.setAttribute("aria-expanded", String(isOpen));
 });
 
 /* Close menu when clicking a link (mobile) */
-navLinks.forEach(link => {
+navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     nav.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn?.setAttribute("aria-expanded", "false");
   });
 });
 
@@ -35,8 +35,9 @@ const setActive = () => {
     }
   }
 
-  navLinks.forEach(a => {
-    const target = a.getAttribute("href").replace("#", "");
+  navLinks.forEach((a) => {
+    const href = a.getAttribute("href") || "#home";
+    const target = href.replace("#", "");
     a.classList.toggle("active", target === currentId);
   });
 };
@@ -44,24 +45,65 @@ const setActive = () => {
 window.addEventListener("scroll", setActive);
 setActive();
 
-/* Contact form (demo) */
+/* =========================
+   Contact form (Formspree REAL SEND)
+   ========================= */
 const form = document.getElementById("contactForm");
 const toast = document.getElementById("toast");
 const toastText = document.getElementById("toastText");
 
 function showToast(msg) {
+  if (!toast || !toastText) {
+    alert(msg);
+    return;
+  }
   toastText.textContent = msg;
   toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 2200);
+  setTimeout(() => toast.classList.remove("show"), 2500);
 }
 
-form.addEventListener("submit", (e) => {
+form?.addEventListener("submit", async (e) => {
   e.preventDefault();
-  form.reset();
-  showToast("Message sent! ✅");
+
+  const btn = form.querySelector('button[type="submit"]');
+  const btnOldHTML = btn ? btn.innerHTML : "";
+
+  try {
+    // button loading state
+    if (btn) {
+      btn.disabled = true;
+      btn.style.opacity = "0.85";
+      btn.innerHTML = "Sending...";
+    }
+
+    // ✅ Send to Formspree (no page refresh)
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+
+    if (res.ok) {
+      form.reset();
+      showToast("✅ Message sent successfully!");
+    } else {
+      showToast("❌ Failed to send. Please try again.");
+    }
+  } catch (err) {
+    console.error(err);
+    showToast("❌ Network error. Please try again.");
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+      btn.innerHTML = btnOldHTML;
+    }
+  }
 });
 
-/* Skill sections JS animation */
+/* =========================
+   Skill sections JS animation
+   ========================= */
 // Skills % count animation when section appears
 const skillCards = document.querySelectorAll(".skill-card");
 
@@ -77,30 +119,34 @@ const animateCount = (el, target) => {
   }, stepTime);
 };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
 
-    const card = entry.target;
-    const target = parseInt(card.dataset.percent, 10);
-    const counter = card.querySelector(".count");
+      const card = entry.target;
+      const target = parseInt(card.dataset.percent, 10);
+      const counter = card.querySelector(".count");
 
-    if (!card.dataset.done) {
-      animateCount(counter, target);
-      card.dataset.done = "true";
-    }
-  });
-}, { threshold: 0.35 });
+      if (!card.dataset.done) {
+        animateCount(counter, target);
+        card.dataset.done = "true";
+      }
+    });
+  },
+  { threshold: 0.35 }
+);
 
-skillCards.forEach(card => observer.observe(card));
+skillCards.forEach((card) => observer.observe(card));
 
-/* Skills slider functionality */
+/* =========================
+   Skills slider functionality
+   ========================= */
 const skillsGrid = document.querySelector("#skillsSlider .skills-grid");
 const skillsNext = document.getElementById("skillsNext");
 const skillsPrev = document.getElementById("skillsPrev");
 
 function getScrollAmount() {
-  // Scroll by ~1 card width (works even if card width changes)
   const firstCard = skillsGrid?.children?.[0];
   if (!firstCard) return 300;
 
@@ -108,12 +154,10 @@ function getScrollAmount() {
   return Math.round(cardWidth + 26); // 26 = your gap
 }
 
-skillsNext.addEventListener("click", () => {
+skillsNext?.addEventListener("click", () => {
   skillsGrid.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
 });
 
-skillsPrev.addEventListener("click", () => {
+skillsPrev?.addEventListener("click", () => {
   skillsGrid.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
 });
-
-

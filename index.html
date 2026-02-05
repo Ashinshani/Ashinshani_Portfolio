@@ -537,23 +537,23 @@
     <div class="contact-content">
       <div class="section-title">
         <h2>Contact Me</h2>
-        <p>Send a quick message. (This form shows a success toast only.)</p>
+        <p>I’m always open to discussing data-driven projects or innovative AI solutions. Feel free to reach out! 🚀✨</p>
       </div>
 
-      <form class="glass card form" id="contactForm">
+      <form class="glass card form" action="https://formspree.io/f/xojnaeyg" method="POST" id="contactForm">
         <div class="field">
           <label for="name">Name</label>
-          <input id="name" type="text" placeholder="Your name" required />
+          <input id="name" type="text" placeholder="Full name" name="name" required />
         </div>
 
         <div class="field">
           <label for="email">Email</label>
-          <input id="email" type="email" placeholder="you@email.com" required />
+          <input id="email" type="email" placeholder="Email address" name="email" required />
         </div>
 
         <div class="field">
           <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+          <textarea id="message" rows="5" placeholder="Message..." name="message" required></textarea>
         </div>
 
         <button class="btn primary" type="submit">
@@ -563,7 +563,7 @@
         </button>
 
         <p class="form-note">
-          Tip: Replace this with EmailJS / backend later if you want real sending.
+          
         </p>
       </form>
     </div>
@@ -575,7 +575,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> QualiCode. All rights reserved.</p>
+      <p>© <span id="year"></span> Ashinshani Bandara. All rights reserved.</p>
       <a class="to-top" href="#home">Back to top ↑</a>
     </div>
   </footer>
