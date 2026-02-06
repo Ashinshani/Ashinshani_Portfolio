@@ -1160,3 +1160,137 @@ input:focus, textarea:focus{
   color: #a855f7;
   font-size: 15px;
 }
+
+/* =========================
+   About end section (cards + short description)
+   ========================= */
+
+.about-end{
+  margin-top: 26px;
+
+  /* ✅ center the whole block */
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+/* ✅ make sure cards don't stretch weirdly */
+.about-mini-card{
+  text-align: center;
+  padding: 22px 18px;
+  border-radius: 22px;
+}
+
+.about-mini-icon{
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 0 18px rgba(168,85,247,0.25);
+}
+
+.about-mini-icon img{
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+.about-mini-card h3{
+  margin: 6px 0 10px;
+  font-size: 20px;
+  color: rgba(244,241,255,0.95);
+}
+
+.about-mini-card p{
+  margin: 0 0 6px;
+  color: rgba(244,241,255,0.82);
+  line-height: 1.5;
+  font-size: 14.5px;
+}
+
+.about-mini-card .muted{
+  color: rgba(244,241,255,0.65);
+  font-weight: 600;
+  font-size: 13.5px;
+}
+
+.about-short{
+  padding: 18px 18px;
+  border-radius: 22px;
+
+  /* ✅ keep the description card centered and same width */
+  width: 100%;
+}
+
+.about-short p{
+  margin: 0;
+  color: rgba(244,241,255,0.78);
+  line-height: 1.75;
+  font-size: 14.5px;
+  text-align: center;
+  max-width: 72ch;
+  margin-inline: auto;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .about-end{
+    max-width: 92%;
+  }
+
+  .about-cards{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   Glowing Purple Stat Icons
+   ========================= */
+
+.stat-icon{
+  width: 56px;
+  height: 56px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+
+  display: grid;
+  place-items: center;
+
+  /* Purple glass background */
+  background: radial-gradient(
+    circle at top left,
+    rgba(168,85,247,0.55),
+    rgba(88,28,135,0.9)
+  );
+
+  /* Glow effect */
+  box-shadow:
+    0 0 12px rgba(168,85,247,0.65),
+    0 0 28px rgba(168,85,247,0.45),
+    inset 0 0 10px rgba(255,255,255,0.18);
+
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.stat-icon img{
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(1.2) drop-shadow(0 0 6px rgba(255,255,255,0.6));
+}
+
+
