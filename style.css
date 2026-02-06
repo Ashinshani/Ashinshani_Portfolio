@@ -961,4 +961,202 @@ input:focus, textarea:focus{
   }
 }
 
+/* =========================
+   Services Section
+   ========================= */
 
+.services-section {
+  padding-top: 80px;
+}
+
+.section-head.center {
+  text-align: center;
+}
+
+.section-head.center p {
+  color: rgba(244,241,255,0.75);
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* Service Card */
+.service-card {
+  padding: 26px 22px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(168,85,247,0.35);
+}
+
+/* Icon */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  border-radius: 16px;
+  background: rgba(168,85,247,0.2);
+  box-shadow: 0 0 18px rgba(168,85,247,0.45);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #e9d5ff;
+  font-size: 18px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(244,241,255,0.75);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Services – Shape Style
+   ========================= */
+
+.services-shape {
+  position: relative;
+  padding: 90px 0;
+}
+
+.services-shape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 500px at 50% 0%, rgba(168,85,247,.25), transparent 60%),
+    radial-gradient(900px 500px at 50% 100%, rgba(34,211,238,.15), transparent 60%);
+  pointer-events: none;
+}
+
+.services-shape-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-top: 60px;
+}
+
+/* Card */
+.service-shape-card {
+  position: relative;
+  padding: 40px 26px 28px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(14px);
+  text-align: left;
+}
+
+/* Number + abstract shape */
+.shape-number {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  width: 110px;
+  height: 90px;
+  background: linear-gradient(
+    135deg,
+    rgba(168,85,247,.55),
+    rgba(34,211,238,.35)
+  );
+  border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%;
+  filter: blur(0.2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(168,85,247,.45);
+}
+
+.shape-number img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: brightness(1.15);
+}
+
+
+/* Text */
+.service-shape-card h3 {
+  margin-top: 48px;
+  margin-bottom: 14px;
+  font-size: 18px;
+  color: #f5edff;
+}
+
+.service-shape-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(244,241,255,.75);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .services-shape-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .shape-number {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .service-shape-card {
+    text-align: center;
+  }
+}
+
+/* =========================
+   Service List (Checklist)
+   ========================= */
+
+.service-list {
+  margin-top: 18px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  color: rgba(244,241,255,0.85);
+  line-height: 1.6;
+}
+
+/* custom check icon */
+.service-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-weight: 900;
+  color: #a855f7;
+  font-size: 15px;
+}
