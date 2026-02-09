@@ -1335,3 +1335,78 @@ input:focus, textarea:focus{
   }
   .about-avatar-wrap{ width: 260px; }
 }
+
+/* =========================
+   Projects top tech buttons
+   ========================= */
+
+.projects-tags{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0 26px;   /* cards වලට උඩින් space */
+}
+
+/* ⬇️ pill (999px) → square-soft */
+.project-tag{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+
+  border-radius: 14px;   /* ✅ square look */
+  text-decoration: none;
+
+  font-weight: 800;
+  font-size: 14px;
+  color: rgba(244,241,255,.95);
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+
+  transition: all .3s ease;
+}
+
+.project-tag img{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(1.15);
+}
+
+.project-tag:hover{
+  background: rgba(168,85,247,0.22);
+  border-color: rgba(168,85,247,0.45);
+  box-shadow: 0 0 18px rgba(168,85,247,0.45);
+  transform: translateY(-2px);
+}
+
+/* mobile wrap */
+@media (max-width: 600px){
+  .projects-tags{
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+   Projects heading + buttons row
+   ========================= */
+
+.projects-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap; /* mobile safe */
+}
+
+.projects-head h2{
+  margin: 0;
+}
+
+/* buttons stay right */
+.projects-head .projects-tags{
+  margin: 0;
+}
+
