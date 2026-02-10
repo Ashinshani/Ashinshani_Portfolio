@@ -1410,3 +1410,60 @@ input:focus, textarea:focus{
   margin: 0;
 }
 
+/* =========================
+   ABOUT responsive layout (ONLY for #about)
+   ========================= */
+
+#about .section-grid{
+  display: grid;
+  gap: 28px;
+  align-items: start;
+
+  grid-template-columns: 1.05fr 1.15fr 0.8fr;
+  grid-template-areas:
+    "title who who"
+    "end   end image";
+}
+
+#about .section-title{ grid-area: title; }
+#about .about-who{ grid-area: who; }
+#about .about-end{ grid-area: end; }
+#about .about-image{ grid-area: image; justify-self: end; }
+
+/* image size */
+#about .about-avatar-wrap{ width: 300px; }
+
+/* ✅ Tablet + Mobile */
+@media (max-width: 1024px){
+  #about .section-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "who"
+      "image"
+      "end";
+  }
+
+  #about .about-image{
+    justify-self: center;
+    margin-top: 8px;
+  }
+
+  #about .about-avatar-wrap{ width: 240px; }
+}
+
+/* ✅ phone: cards stack */
+@media (max-width: 700px){
+  #about .about-cards{
+    grid-template-columns: 1fr;
+  }
+
+  #about .mini-stats{
+    grid-template-columns: 1fr;   /* stat 3 lines */
+  }
+
+  #about .about-short{
+    padding: 16px;
+  }
+}
+
