@@ -1467,3 +1467,69 @@ input:focus, textarea:focus{
   }
 }
 
+/* =========================
+   Skills Slider - Mobile Responsive Fix
+   ========================= */
+
+.skills-slider .skills-grid{
+  scroll-snap-type: x mandatory;          /* swipe smooth */
+  -webkit-overflow-scrolling: touch;
+}
+
+.skills-slider .skills-grid > .skill-card{
+  scroll-snap-align: start;
+}
+
+/* ✅ Tablet */
+@media (max-width: 900px){
+  .skills-slider-wrapper{
+    margin-inline: auto;
+  }
+
+  .skills-arrow{
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .skills-slider .skills-grid{
+    gap: 18px;
+  }
+
+  .skills-slider .skills-grid > .skill-card{
+    width: 220px;          /* card width reduce */
+  }
+}
+
+/* ✅ Phone */
+@media (max-width: 600px){
+  /* arrows off on phones */
+  .skills-arrow{
+    display: none;
+  }
+
+  /* make slider full width + swipe */
+  .skills-slider{
+    overflow: visible;
+  }
+
+  .skills-slider .skills-grid{
+    padding: 8px 4px;
+    gap: 14px;
+  }
+
+  /* show ~1.2 cards on screen */
+  .skills-slider .skills-grid > .skill-card{
+    width: 190px;
+  }
+
+  /* title sizing */
+  .skills-head h2{
+    font-size: 34px;
+  }
+
+  .skills-head p{
+    font-size: 14px;
+    padding-inline: 10px;
+  }
+}
